@@ -49,3 +49,9 @@ swap-middle x y z =
   (y ⊔ x) ⊔ z
     ≡⟨ sym (assoc y x z) ⟩
   y ⊔ (x ⊔ z) ∎
+
+singleton-idem : (a : A) → ⟦ a ⟧ ⊔ ⟦ a ⟧ ≡ ⟦ a ⟧
+singleton-idem a = idem ⟦ a ⟧
+
+singleton-comm : (a b : A) → ⟦ a ⟧ ⊔ ⟦ b ⟧ ≡ ⟦ b ⟧ ⊔ ⟦ a ⟧
+singleton-comm a b = comm ⟦ a ⟧ ⟦ b ⟧
